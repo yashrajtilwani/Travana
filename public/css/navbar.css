@@ -1,12 +1,28 @@
+.navbar-brand i{
+    margin: 0 .5rem;
+}
+
 .filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter-container{
     height: 12vh;
     display: flex;
     flex-direction: row;
     padding: auto 0;
     margin-top: .8rem;
+    margin: 0 1rem 0 0;
     align-items: center;
-    justify-content: space-between;
     align-content: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.filter-container::-webkit-scrollbar {
+    display: none;
 }
 
 .filter{
@@ -18,6 +34,8 @@
     justify-content: center;
     opacity: 0.8;
     cursor: pointer;
+    width: 4rem;
+    margin: 0 .7rem;
 }
 
 .filter:hover{
@@ -36,6 +54,27 @@
     align-items: center;
     padding: .5rem ;
     padding-left: .5rem !important;
+    flex-shrink: 0;
+}
+
+@media(max-width: 400px){
+    .form-check-label-max{
+        display: none;
+    }
+
+    .form-check-label-min{
+        display: inline;
+    }
+}
+
+@media(min-width: 400px){
+    .form-check-label-max{
+        display: inline;
+    }
+
+    .form-check-label-min{
+        display: none;
+    }
 }
 
 .tax-info {

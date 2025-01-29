@@ -1,0 +1,94 @@
+.review-label{
+    margin: 0 !important;
+}
+
+.add-review-btn{
+    border-color: #fe424d !important;
+    color: #fe424d !important;
+}
+
+.add-review-btn:hover{
+    color: white !important;
+    background-color: #fe424d !important;
+}
+
+.review-cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.review-card{
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 2.5rem;
+}
+
+@media(max-width: 500px){
+    .review-card{
+        margin: 1rem;
+    }
+}
+
+
+.review-top{
+    display: flex;
+}
+
+.review-pic{
+    margin-right: 1.5rem;
+}
+
+.review-pic img{
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.review-head h5{
+    margin: 0;
+}
+
+.stars-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2rem;
+    justify-content: start;
+    margin-right: .3rem;
+}
+.stars input {
+    display: none;
+}
+.stars label {
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+}
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #fe424d;
+}
+
+.stars-red{
+    color: #fe424d;
+}
+
+.stars-grey{
+    color: #ccc;
+}
+
+
+.review-card h6{
+    margin: 0;
+}
+
+.btn-review{
+    background-color: #fe424d !important;
+    border-color: #fe424d !important;
+}
