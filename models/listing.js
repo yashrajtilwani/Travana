@@ -42,6 +42,10 @@ const listingSchema = new mongoose.Schema({
             type:Number,
             reduired: true
         }
+    },
+    filter:{
+        type: String,
+        enum: ["default", "beach", "castle", "arctic", "views", "windmill", "pool", "farm", "treehouse", "island", "camping", "boathouse", "dome"]
     }
 });
 

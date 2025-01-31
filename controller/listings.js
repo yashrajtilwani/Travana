@@ -8,8 +8,14 @@ const geocoder = NodeGeocoder( {
 
 
 module.exports.index = async (req, res) => {
-    const listings = await Listing.find();
-    res.render("listings/index.ejs", { listings });
+    let {filter} = req.query;
+    if(typeof(filter) === "undefined"){
+        const listings = await Listing.find();
+        res.render("listings/index.ejs", { listings });
+    } else {
+        const listings = await Listing.find({filter: filter});
+        res.render("listings/index.ejs", { listings });
+    }    
 };
 
 module.exports.renderNewForm = (req, res) => {

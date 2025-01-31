@@ -8,6 +8,11 @@
     align-items: center;
 }
 
+.filter-container a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
 .filter-container{
     height: 12vh;
     display: flex;
@@ -32,10 +37,9 @@
     align-items: center;
     height: 100%;
     justify-content: center;
-    opacity: 0.8;
+    opacity: 0.7;
     cursor: pointer;
     width: 4rem;
-    margin: 0 .7rem;
 }
 
 .filter:hover{
@@ -57,22 +61,8 @@
     flex-shrink: 0;
 }
 
-@media(max-width: 400px){
-    .form-check-label-max{
-        display: none;
-    }
-
-    .form-check-label-min{
-        display: inline;
-    }
-}
-
-@media(min-width: 400px){
-    .form-check-label-max{
-        display: inline;
-    }
-
-    .form-check-label-min{
+@media(max-width: 450px){
+    .taxes{
         display: none;
     }
 }
