@@ -3,8 +3,8 @@
 <body>
     <div class="row">
         <div class="col-md-4 offset-md-4 col-10 offset-1 mt-4">
-            <h4><i>User Signup</i></h4>
-            <form action="/signup" method="post" class="needs-validation mt-3" novalidate>
+            <h4><i>Verify OTP</i></h4>
+            <form action="/signup/verify" method="post" class="needs-validation mt-3" novalidate>
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" name="username" id="username" class="form-control" required>
@@ -13,22 +13,20 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">E-mail</label>
-                    <input type="text" name="email" id="email" class="form-control" required>
-                    <div class="invalid-feedback">
-                        Enter valid email
-                    </div>
-                </div>
-                <!--
-                <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
                     <input type="text" name="password" id="password" class="form-control" required>
                     <div class="invalid-feedback">
                         Enter valid password
                     </div>
                 </div>
-                -->
-                <button class="btn edit-btn">Send OTP</button>
+                <div class="mb-3">
+                    <label for="otp" class="form-label">Enter OTP</label>
+                    <input type="text" name="otp" id="otp" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Enter valid otp
+                    </div>
+                </div>
+                <button class="btn edit-btn">Signup</button>
             </form>
         </div>
     </div>

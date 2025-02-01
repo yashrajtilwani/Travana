@@ -12,6 +12,10 @@ module.exports.index = async (req, res) => {
     if(typeof(filter) === "undefined"){
         const listings = await Listing.find();
         res.render("listings/index.ejs", { listings });
+    } else if(filter == "trending"){
+        const listings = await Listing.find().sort({trendScore: -1});
+        //return res.send(listings);
+        res.render("listings/index.ejs", { listings });
     } else {
         const listings = await Listing.find({filter: filter});
         res.render("listings/index.ejs", { listings });
@@ -29,6 +33,8 @@ module.exports.showListings = async (req, res) => {
         res.locals.error = req.flash("error", "Listing you requested does not exist!");
         res.redirect("/listings");
     } else {
+        data.trendScore += 1;
+        data.save();
         res.render("listings/show.ejs", { data });
     }
 };

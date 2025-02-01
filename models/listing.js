@@ -45,7 +45,12 @@ const listingSchema = new mongoose.Schema({
     },
     filter:{
         type: String,
-        enum: ["default", "beach", "castle", "arctic", "views", "windmill", "pool", "farm", "treehouse", "island", "camping", "boathouse", "dome"]
+        enum: ["default", "beach", "castle", "arctic", "views", "windmill", "pool", "farm", "treehouse", "island", "camping", "boathouse", "dome"],
+        default: "default"
+    },
+    trendScore:{
+        type: Number,
+        default: 0
     }
 });
 
