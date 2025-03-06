@@ -93,3 +93,9 @@ module.exports.deleteListing = async (req, res) =>{
     res.locals.success = req.flash("success", "Listing deleted successfully!");
     res.redirect("/listings");
 };
+
+module.exports.searchListings = async (req, res) => {
+    let toSearch = req.body.toSearch ;
+    let result = await Listing.findOne({title: { $regex: toSearch, $options: "i" }});
+    res.redirect(`/listings/${result._id}`);
+};
