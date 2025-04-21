@@ -1,3 +1,8 @@
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
 .navbar-brand i{
     margin: 0 .5rem;
 }

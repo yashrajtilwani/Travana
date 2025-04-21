@@ -22,6 +22,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
+const port = process.env.PORT || 8080;
+
 
 //application
 const app = express();
@@ -124,6 +126,6 @@ app.use((err, req, res, next) => {
 });
 
 //server
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log("server started at port 8080");
 });

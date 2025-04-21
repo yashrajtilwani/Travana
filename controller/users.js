@@ -21,8 +21,8 @@ module.exports.signup = async (req, res) => {
         const mailOptions = {
             to: email,
             from: process.env.EMAIL,
-            subject: 'Email Verification for wanderlust',
-            text: `Your Signup OTP for Wanderlust is ${otp} Please do no share it with anyone.`
+            subject: 'Email Verification for Travana',
+            text: `Your Signup OTP for Travana is ${otp} Please do no share it with anyone.`
         }
 
         await sendMail(mailOptions);
